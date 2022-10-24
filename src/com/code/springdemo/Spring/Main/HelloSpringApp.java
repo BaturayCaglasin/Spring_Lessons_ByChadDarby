@@ -1,6 +1,6 @@
-package com.code.springdemo.afterSpring;
+package com.code.springdemo.Spring.Main;
 
-import com.code.springdemo.beforeSpring.Coach;
+import com.code.springdemo.Spring.Coach.Coach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class HelloSpringApp {
@@ -16,6 +16,8 @@ public class HelloSpringApp {
         //call methods on the bean
         System.out.println(theCoach.getDailyWorkout());
         System.out.println(theSecondCoach.getDailyWorkout());
+        System.out.println(theCoach.getDailyFortune());
+        System.out.println(theSecondCoach.getDailyFortune());
 
         //close the context
         context.close();

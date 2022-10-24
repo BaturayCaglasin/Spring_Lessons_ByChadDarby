@@ -9,13 +9,22 @@
 
     <!-- Define Your Beans (Java Objects) in Here: -->
     <bean id="BaseballCoach"
-          class="com.code.springdemo.beforeSpring.BaseballCoach">
+          class="com.code.springdemo.Spring.Coach.BaseballCoach">
+        <constructor-arg ref="BaseballCoachFortuneService"/> <!--dependencyInjection by constructor. -->
     </bean>
 
     <bean id="TennisCoach"
-          class="com.code.springdemo.beforeSpring.TennisCoach">
+          class="com.code.springdemo.Spring.Coach.TennisCoach">
+        <constructor-arg ref="TennisCoachFortuneService"/> <!--dependencyInjection by constructor. -->
     </bean>
 
+    <bean id="BaseballCoachFortuneService"
+          class="com.code.springdemo.Spring.Fortune.HappyFortuneService">
+    </bean>
+
+    <bean id="TennisCoachFortuneService"
+          class="com.code.springdemo.Spring.Fortune.HappyFortuneService">
+    </bean>
 
 
     <!--<context:component-scan base-package="com.luv2code.springdemo" />-->
